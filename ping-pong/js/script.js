@@ -25,11 +25,14 @@ p2Button.addEventListener('click', function () {
 	}
 })
 
-reset.addEventListener('click', function () {
+reset.addEventListener('click', resetFunc)
+playto.addEventListener('change', resetFunc)
+
+const resetFunc = () => {
 	p1score.innerText = 0;
 	p2score.innerText = 0;
 	p1Button.removeAttribute('disabled');
 	p2Button.removeAttribute('disabled');
 	p1score.style.color = 'black';
 	p2score.style.color = 'black';
-})
+}
